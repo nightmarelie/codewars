@@ -1,0 +1,11 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nightmarelie/codewars.git",
+  "author": "Oleksii Kryvtsov <nightmarelie@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "launch": "node"
+  }
+}
