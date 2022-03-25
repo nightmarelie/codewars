@@ -1,3 +1,3 @@
-function arrayDiff(a, b) {
+export default function arrayDiff(a, b) {
   return a.filter((i) => !b.includes(i));
 }
