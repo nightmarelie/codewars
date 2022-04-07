@@ -7,3 +7,5 @@ function reverseWords(str) {
     )
     .join(" ");
 }
+
+const reverseWords2 = (s) => s.replace(/\S+/g, (v) => [...v].reverse().join``);
