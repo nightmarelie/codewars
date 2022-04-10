@@ -1,3 +1,6 @@
 function minValue(values) {
-  //your code here
+  return +values
+    .reduce((res, num) => (res.includes(num) ? res : [...res, num]), [])
+    .sort((a, b) => a - b)
+    .join("");
 }
