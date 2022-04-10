@@ -1,6 +1,9 @@
 "use strict";
 
 function flattenAndSort(array) {
-  // Good luck, brave code warrior!
-  return array.flatMap((a) => a).sort((a, b) => a - b);
+  return array.reduce((res, num) => [...res, ...num], []).sort((a, b) => a - b);
+}
+
+function flattenAndSort1(array) {
+  return [].concat(...array).sort((a, b) => a - b);
 }
