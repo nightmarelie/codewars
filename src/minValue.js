@@ -4,3 +4,7 @@ function minValue(values) {
     .sort((a, b) => a - b)
     .join("");
 }
+
+function minValue1(values) {
+  return parseInt(Array.from(new Set(values)).sort().join(""));
+}
