@@ -15,3 +15,15 @@ function capitalize1(s) {
     [...s].map((c, i) => (i % 2 === r ? c.toUpperCase() : c)).join("")
   );
 }
+
+function capitalize1(s) {
+  const odd = s
+    .split("")
+    .map((l, i) => (i % 2 !== 0 ? l.toUpperCase() : l))
+    .join("");
+  const even = s
+    .split("")
+    .map((l, i) => (i % 2 === 0 ? l.toUpperCase() : l))
+    .join("");
+  return [even, odd];
+}
