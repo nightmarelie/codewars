@@ -13,3 +13,17 @@ function stockList(listOfArt, listOfCat) {
     .map(([key, value]) => `(${key} : ${value})`)
     .join(" - ");
 }
+
+function stockList1(listOfArt, listOfCat) {
+  if (!listOfArt.length || !listOfCat.length) return "";
+
+  return listOfCat
+    .map((w) => {
+      const s = listOfArt.reduce(
+        (a, b) => a + (b.charAt(0) === w ? +b.split(" ")[1] : 0),
+        0
+      );
+      return `(${w} : ${s})`;
+    })
+    .join(" - ");
+}
