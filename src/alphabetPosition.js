@@ -5,3 +5,11 @@ function alphabetPosition(text) {
     .filter((a) => a >= 0)
     .join(" ");
 }
+
+function alphabetPosition1(text) {
+  return text
+    .toUpperCase()
+    .match(/[a-z]/gi)
+    .map((c) => c.charCodeAt() - 64)
+    .join(" ");
+}
