@@ -5,6 +5,6 @@ function pigIt(str) {
     .join(" ");
 }
 
-function pigIt(str) {
+function pigIt1(str) {
   return str.replace(/(\w)(\w*)(\s|$)/g, "$2$1ay$3");
 }
