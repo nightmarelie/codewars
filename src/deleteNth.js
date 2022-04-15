@@ -5,3 +5,8 @@ function deleteNth(arr, n) {
     return count[i] < n;
   });
 }
+
+const deleteNth1 = (a, x) => {
+  let m = {};
+  return a.filter((v) => (m[v] = m[v] + 1 || 1) <= x);
+};
