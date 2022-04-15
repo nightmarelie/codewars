@@ -5,3 +5,9 @@ const reverseSeq = (n) => {
   }
   return result;
 };
+
+const reverseSeq1 = (n) => {
+  return Array(n)
+    .fill(0)
+    .map((e, i) => n - i);
+};
