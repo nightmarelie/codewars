@@ -1,5 +1,11 @@
 function comp(array1, array2) {
-  return !!array1 && !!array2
-    ? array2.map(Math.sqrt).every((e) => array1.indexOf(e) !== -1)
-    : false;
+  if (!array1 || !array2) {
+    return false;
+  }
+  const compare = (a, b) => a - b;
+  const ar1 = array1.sort(compare);
+  return array2
+    .map(Math.sqrt)
+    .sort(compare)
+    .every((e, idx) => ar1[idx] === e);
 }
