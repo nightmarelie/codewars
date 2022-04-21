@@ -3,5 +3,5 @@ function squareSum(numbers) {
 }
 
 function squareSum(numbers) {
-  return numbers.reduce((sum, num) => sum + num * num, 0);
+  return numbers.reduce((num1, num2) => num1 * num1 + num2 * num2);
 }
