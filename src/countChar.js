@@ -4,3 +4,13 @@ function count(string) {
     {}
   );
 }
+
+const count = (string) =>
+  [...string].reduce((pre, val) => ((pre[val] = -~pre[val]), pre), {});
+
+// pre[val] = val in pre ? ++pre[val] : 1;
+// bitwise not / unary negation
+// ~2 -> -3
+// -~2 -> 3
+
+// -~undefined -> 1
