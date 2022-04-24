@@ -8,3 +8,10 @@ function updateLight(current) {
       return "green";
   }
 }
+
+const updateLight = (current) =>
+  ({
+    green: "yellow",
+    yellow: "red",
+    red: "green",
+  }[current]);
