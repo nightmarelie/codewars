@@ -1,5 +1,4 @@
 function incrementString(strng) {
-  console.log(strng);
   const num = parseInt(strng.replace(/[^\d.]/g, ""));
   return strng.replace(
     new RegExp(
