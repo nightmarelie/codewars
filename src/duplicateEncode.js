@@ -25,3 +25,16 @@ function duplicateEncode(word) {
     word.indexOf(m) == word.lastIndexOf(m) ? "(" : ")"
   );
 }
+
+function duplicateEncode(word) {
+  var letters = word.toLowerCase().split("");
+  return letters
+    .map(function (c, i) {
+      return letters.some(function (x, j) {
+        return x === c && i !== j;
+      })
+        ? ")"
+        : "(";
+    })
+    .join("");
+}
